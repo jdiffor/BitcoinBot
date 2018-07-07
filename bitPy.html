@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>BitDisplay</title>
+        <link rel="stylesheet" href="https://bootswatch.com/3/cyborg/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .coin {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">BitDisplay</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div id="coins" class="row"></div>
+                <div class="col-md-3">
+                    <div class="well text-center">
+                        <h3 class="coin">BTC</h3>
+                        <h3 id="btc" class="coin">$0000.00</h3>
+                        <h4 class="coin">Since Initial</h4>
+                        <h4 id="btcSinceInitial" class="coin">0.00%</h4>
+                        <h4 class="coin">Strategy</h4>
+                        <h4 id="btcInterstitial" class="coin">0.00%</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="well text-center">
+                        <h3 class="coin">BCH</h3>
+                        <h3 id="bch" class="coin">$000.00</h3>
+                        <h4 class="coin">Since Initial</h4>
+                        <h4 id="bchSinceInitial" class="coin">0.00%</h4>
+                        <h4 class="coin">Strategy</h4>
+                        <h4 id="bchInterstitial" class="coin">0.00%</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="well text-center">
+                        <h3 class="coin">ETH</h3>
+                        <h3 id="eth" class="coin">$000.00</h3>
+                        <h4 class="coin">Since Initial</h4>
+                        <h4 id="ethSinceInitial" class="coin">0.00%</h4>
+                        <h4 class="coin">Strategy</h4>
+                        <h4 id="ethInterstitial" class="coin">0.00%</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="well text-center">
+                        <h3 class="coin">LTC</h3>
+                        <h3 id="ltc" class="coin">$00.00</h3>
+                        <h4 class="coin">Since Initial</h4>
+                        <h4 id="ltcSinceInitial" class="coin">0.00%</h4>
+                        <h4 class="coin">Strategy</h4>
+                        <h4 id="ltcInterstitial" class="coin">0.00%</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+           integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+           crossorigin="anonymous"></script>
+
+        <script src='main.js'></script>
+
+    </body>
+</html>

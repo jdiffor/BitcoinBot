@@ -1,0 +1,30 @@
+<coin>
+    <btc>
+        <currentPrice>6582.51</currentPrice>
+        <currentAmount>0</currentAmount>
+        <initialPrice>6558.56</initialPrice>
+        <lastBuyPrice>6559.10</lastBuyPrice>
+        <intermediateProfit>2.95</intermediateProfit>
+    </btc>
+    <ltc>
+        <currentPrice>82.79</currentPrice>
+        <currentAmount>0</currentAmount>
+        <initialPrice>82.57</initialPrice>
+        <lastBuyPrice>82.59</lastBuyPrice>
+        <intermediateProfit>0.01</intermediateProfit>
+    </ltc>
+    <eth>
+        <currentPrice>465.29</currentPrice>
+        <currentAmount>0</currentAmount>
+        <initialPrice>466.92</initialPrice>
+        <lastBuyPrice>466.93</lastBuyPrice>
+        <intermediateProfit>-0.29</intermediateProfit>
+    </eth>
+    <bch>
+        <currentPrice>728.52</currentPrice>
+        <currentAmount>0</currentAmount>
+        <initialPrice>725.98</initialPrice>
+        <lastBuyPrice>726.31</lastBuyPrice>
+        <intermediateProfit>0.00</intermediateProfit>
+    </bch>
+</coin>
