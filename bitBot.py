@@ -20,7 +20,7 @@ for child in root:
             print("lost connection")
             continue
         break
-
+print("Initial complete")
 tree.write('coins.xml')
 
 
@@ -29,13 +29,16 @@ def otherJob():
     root = tree.getroot()
     for child in root:
         id = child.tag.upper() + "-USD"
+        first = True
         while True:
             try:
                 coin = requests.get(api_url + 'products/' + id + '/ticker').json()
                 child[0].text = "%0.2f" % float(coin['price'])
             except:
                 two = 2
-                print("lost connection")
+                if first:
+                    print("lost connection")
+                first = False
                 continue
             break
     tree.write('coins.xml')
@@ -50,11 +53,13 @@ def doYourJob(buy):
                 price = requests.get(api_url + 'products/' + id + '/ticker').json()['price']
                 if buy:
                     child[3].text = "%0.2f" % float(price)
+                    print('I bought', child.tag, "at", float(price), "at", time.asctime(time.localtime(time.time())))
                 else:
                     temp = float(child[4].text)
                     diff = float(price) - float(child[3].text)
                     temp += diff
                     child[4].text = "%0.2f" % float(temp)
+                    print('I sold', child.tag, "at", float(price), "at", time.asctime(time.localtime(time.time())))
             except:
                 two = 2
                 print("lost connection")
@@ -62,11 +67,11 @@ def doYourJob(buy):
             break
 
     tree.write('coins.xml')
-    print("I did it")
+    print(buy)
 
 schedule.every(1).minutes.do(otherJob)
-schedule.every().day.at("05:30").do(doYourJob, True)
-schedule.every().day.at("10:00").do(doYourJob, False)
+schedule.every().day.at("06:00").do(doYourJob, True)
+schedule.every().day.at("09:00").do(doYourJob, False)
 
 while True:
     schedule.run_pending()
